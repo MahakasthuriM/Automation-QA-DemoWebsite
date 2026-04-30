@@ -1,0 +1,32 @@
+--Wait concepts
+1)Why need to handle Waits ?  --> Synchronization issues
+2)Why Thread.sleep not preferred for automation ?
+ advantage: East to use
+ Disadvantage : (Thread.sleep(5000))
+    - if time is not sufficient then - get exception
+    -if Element loaded before the wait time - But it still wait till the sleep time . This will affect performance
+    - Each element wise - this comment will be used multiple times
+
+ Note : That's why Webdriver waits mostly used in Automation
+
+3)Types of waits in webDriver?
+      -implicit Wait
+      -Explicit Wait ,Fluent Wait
+4) Types of exception mostly occur
+     - NoSuchElementException -> Synchronization problem- locator currently not present in page(But locator is correct)
+     -ElementNotFoundException -> Locator is wrong
+---------------------------------------------------------
+1)Implicit Wait(Global wait , One time declare-after d)
+ comment: d.manage().timeouts().implicitlyWait(Duration.ofSeconds(#specify));
+ - it should be declared after the driver instance and  one time declaration.
+
+ Advantage :
+  - Global wait -This wait is applicable to all statements till driver is alive(before driver is closed)
+  - #Specify time is max time , so if element is already loaded before that it will excute - it won't
+     wait for max time . and it goes to next line
+
+Disadvantage :
+  - NoSuchElementException might occur - if Element loading time take more then wait time .
+
+-----------------------------------
+
