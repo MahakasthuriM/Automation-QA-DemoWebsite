@@ -1,0 +1,8 @@
+--Wait concepts
+1)Why need to handle Waits ?  --> Synchronization issues
+2)Types of waits in webDriver?
+      -implicit Wait
+      -Explicit Wait ,Fluent Wait
+3) Types of exception mostly occur
+     - NoSuchElementException -> Synchronization problem- locator currently not present in page(But locator is correct)
+     -ElementNotFoundException -> Locator is wrong
