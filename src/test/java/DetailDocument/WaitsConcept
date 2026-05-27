@@ -41,3 +41,6 @@ Explicit wait = “Wait up to X seconds, but exit as soon as condition is met.
 
 -------------------------------------------
 3) Fluent Wait
+Same as Explicit wait but adding extra checkes
+  - with Polling time <- can be defined
+  - ignoring the Exception till the max time is overed (polling time Exception ignored) 
