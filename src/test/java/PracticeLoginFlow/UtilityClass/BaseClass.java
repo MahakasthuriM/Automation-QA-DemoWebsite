@@ -1,4 +1,4 @@
-package UtilityClass;
+package PracticeLoginFlow.UtilityClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
