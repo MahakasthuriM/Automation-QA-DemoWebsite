@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupsConcept">
+    <test name="GroupsTest">
+        <groups>
+            <define name="NewGroup">
+                <include name="Sanity"/>
+                <include name="Regression"/>
+            </define>
+            <run>
+               <!-- <include name="NewGroup"/> -->
+                <include name="all" />
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNGConcepts.Groups.loginExample"></class>
+            <class name="TestNGConcepts.Groups.SignInExample"></class>
+            <class name="TestNGConcepts.Groups.paymentExample"></class>
+        </classes>
+    </test>
+</suite>

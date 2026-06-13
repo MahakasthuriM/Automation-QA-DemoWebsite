@@ -1,0 +1,16 @@
+TestNG :
+=========
+TestNG- Test new Generation
+
+Advantage:
+==========
+- Manage Testcase+ Test Suite
+- Prioritize
+- Parameterizes
+- Parallel execution
+- Reports
+
+setup
+========
+- Install testNG library based IDE/ add testNG dependency in POM.xml file
+

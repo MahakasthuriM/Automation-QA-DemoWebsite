@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GroupsConcept">
+    <groups>
+        <run>
+            <include name="Sanity" />
+            <exclude name="Regression"/>
+        </run>
+    </groups>
+
+    <test name="GroupsTest1">
+        <classes>
+            <class name="TestNGConcepts.Groups.loginExample"></class>
+        </classes>
+    </test>
+
+    <test name="GroupTest2">
+        <classes>
+            <class name="TestNGConcepts.Groups.SignInExample"></class>
+        </classes>
+    </test>
+
+    <test name="GroupTest3">
+        <classes>
+            <class name="TestNGConcepts.Groups.paymentExample"></class>
+        </classes>
+    </test>
+</suite>

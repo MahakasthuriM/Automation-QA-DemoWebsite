@@ -1,0 +1,17 @@
+Frame:
+Another website embedded in the a webpage
+
+Handle the Frame:
+- First identify the frame which the element is present that needs to be accessed.
+- Switch to the frame and find the element
+- come out of the page
+
+Syntax:
+
+x--> ID of the frame
+x--> name of the frame
+x--> index (prefer when only single frame available )
+x--> WebElement(find the element and pass as webelement)
+
+d.switchTo().frame(x);
+d.switchTo().defaultContent(); -----> One time decalre For inner frames : frame1-> frame2->default content ->main page

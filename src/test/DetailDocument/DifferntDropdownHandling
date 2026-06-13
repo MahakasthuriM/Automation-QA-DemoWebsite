@@ -1,0 +1,32 @@
+Dropdown:
+===========
+1) Select -Dropdown
+-- Dropdown having tag as 'Select'
+
+Action:
+-------
+Webelement e=d.findElement(by.xpath(//xpath)) ----> find the element of the dropdown field
+Select fil=new Select(e);
+
+// pass the WebElement in the "Select" class
+
+//method to select the value from dropdown
+ - fil.selectByVisibleText("//value//") ----> pass the inner text of the dropdown value
+ -fil.selectByValue("//value//")  -----> pass the value in "Value" attribute for the dropdown value
+ -file.selectByIndex(//int) ----> pass the index of the Dropdown value starts from 0
+//get all options from dropdown
+-fil.getOptions() ---> this will return all the dropdown values as List<WebElement>
+
+======================================================================================
+2)BootStrap -Dropdown
+--Dropdowns having tag other tags without "select"
+
+Approach:
+-Find the dropdown field element and click the element (to open it)
+-1)single option selection --> find the element and click it
+-2) multiple options selection
+  - List<WebElements> list = d.findElements(//common elements);
+  - use the if condtion with || to match the text
+     for(WebElement i: list)
+       if((i.getText().equals("Exmaple1") or (i.getText().equals("Exmaple2"))
+         i.click();

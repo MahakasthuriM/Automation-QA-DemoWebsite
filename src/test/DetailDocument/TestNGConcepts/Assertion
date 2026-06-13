@@ -1,0 +1,33 @@
+Assertion:
+=============
+Verify the Test outcomes
+
+Types of assertion :
+-------------------
+ - Hard assertion
+ - Soft assertion
+
+ ------------------------
+ 1)hard Assertion (Execution stop immediately once any assertion failed )
+ Use :Assert class(all methodsstatic)
+ methods(mostly used)
+ ------
+   - Assert.assertEquals(cond, cond)
+   - Assert.assertNotEquals(cond, cond)
+   - Assert.assertTrue(cond)
+   - Assert.assertFalse(cond)
+   -Assert. assertNull(condtion)
+   - Assert.assertNotNull(cond)
+
+ ----------------------------
+ 2)Soft Assertion
+   - Exeution won't stop , it will continue but assertion failed and error show in the end
+
+ Define:
+     SoftAssert sa=new SoftAssert();
+
+ use all methods same as in Hard assertion using the 'SoftAssert' class object
+     - sa.assertEquals(cond, cond)
+ use below comment to show the assertion error and make the test failed
+    -sa.assertAll()
+

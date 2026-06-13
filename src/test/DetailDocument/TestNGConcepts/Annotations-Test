@@ -1,0 +1,23 @@
+TestNG Annotation :
+==================
+  - Test
+
+
+---------------------------
+1)priority Attribute in Test anno -- it will only on the same class
+  - this is parameter in @Test annotation and by default priority is "0"
+  - It's run in alphabet order of the test method -if multiple methods are having same priority
+  - It can have negative values order - -5 -4 -3 -3 -1 0 1 2 3 . this will execute lower to upper value
+  - Priority can have random value (not seq) - test run as lower to higer
+  - TestNG execute only the @test methods only
+
+  Use "@Test(Priority=1/2/3)"
+------------------------------
+2)dependsOnMethods Attribte in Test anno -- it will be only the same class only
+ -Depending on the specific test method(login) then excute the rest of the Method (search , logout)
+ - Sinlge method , muliple methods can be mentioned (but all should execute )
+ - Test method will be skipped if That dependent method is failed /skipped
+
+ Use
+   @Test(dependsOnMethods={"login"})
+    void search()....

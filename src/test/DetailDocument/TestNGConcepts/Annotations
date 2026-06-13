@@ -1,0 +1,59 @@
+TestNG Annotations:
+=====================
+
+
+-->Suite
+   --->Test
+         -->Class
+               -->TestMethod
+                   -->Test
+
+
+<<------Suite -Run once per Suite------->>
+@BeforeSuite - Run before running Test tag in Xml
+@AfterSuite  -Run After running  All Test in xml
+
+<<-------Test - Run once for Each Test tag ------->>
+@Before Test
+@After Test
+
+Note : Here each Test tag class should have the Before Test anno linked (Inheritance)
+
+<<-------Class - Run once for Each class(where it defined) ---->
+@BeforeClass
+@AfterClass
+
+<<------Method  --Run once for Each Test annotaion in the same class ---->
+@BeforeMethod
+@AfterMethod
+Note : Before/after methods execute -each test (multiple times)
+
+Example :
+@BeforeSuite
+@BeforeTest
+@BeforeClass
+
+@BeforeMethod
+@Test1
+@AfterMethod
+
+@BeforeMethod
+@Test2
+@AfterMethod
+
+@AfterClass
+@AfterTest
+@AfterSuite
+
+
+===================================
+Imp : child class inherit parent class all method - So all method execute
+    if Child and parent is having "class " annotation -> parent execute first
+
+ imp : Suite -once should be declared
+       Test - can be declare multiple times (All execute but Order is not defined , for order need to use "depends on ")
+             -preferred one time
+       Class - once per class
+       Before method -can be declare multiple times (all executes for all test , but order is not gurentee)
+                     -preferred one time in class
+       Best use once
