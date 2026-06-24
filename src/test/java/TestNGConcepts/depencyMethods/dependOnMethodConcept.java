@@ -9,18 +9,19 @@ public class dependOnMethodConcept {
     void openApp(){
         Assert.assertTrue(false);
     }
-    /*@Test(dependsOnMethods = {"openApp"},priority = 1)
+    @Test(dependsOnMethods = {"openApp"},priority = 1)
     void login(){
         Assert.assertTrue(true);
-    }*/
+    }
     @Test(priority = 2)
     void search(){
         Assert.assertTrue(true);
     }
-    @Test(priority =3,dependsOnMethods = {"Test1.a"})
+    @Test(priority =3,dependsOnMethods = {"login"})
     void advSearch(){
         Assert.assertTrue(true);
     }
+
     @Test(priority = 4)
     void logout(){
         Assert.assertTrue(true);

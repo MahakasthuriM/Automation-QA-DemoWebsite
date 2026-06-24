@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="dataProvider">
+    <test name="Test_DP">
+        <classes>
+            <parameter name="name" value="MK"></parameter>
+            <class name="TestNGConcepts.DataProvider.DP1"></class>
+        </classes>
+    </test>
+</suite>
